@@ -2,7 +2,7 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-url = r"E:\ML\covid_19_clean_complete.csv"
+url = "covid_19_clean_complete.csv"
 print("Data loaded successfully")
 df = pd.read_csv(url, parse_dates=["Date"])
 print(df.head())
