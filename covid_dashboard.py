@@ -47,3 +47,9 @@ plt.ylabel("Confimed Cases")
 plt.show()
 
 st.pyplot(plt)
+
+st.subheader("Key Metrics")
+col1, col2, col3 = st.columns(3)
+col1.metric("Total Confirmed Cases", int(df["Confirmed"].max()))
+col1.metric("Total Deaths Cases", int(df["Deaths"].max()))
+col1.metric("Confirmed Cases", int(df["Recovered"].max()))

@@ -27,6 +27,12 @@ plt.xlabel("Month")
 plt.ylabel("Impressions")
 plt.legend(title='Legend', loc='upper left')
 plt.grid(True)
-plt.show()
+# plt.show()
 
 st.pyplot(plt)
+
+st.subheader("Key Metrics")
+col1, col2, col3 =  st.columns(3)
+col1.metric("Max Impressions", int(df["Impressions"].max()))
+col2.metric("Average Impressions", round(df["Impressions"].mean(), 2))
+col3.metric("Total Impressions", int(df["Impressions"].sum()))
